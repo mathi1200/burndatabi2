@@ -102,12 +102,10 @@ section {
     width: 100%;
     border-radius: 8px;
     transition: transform 0.3s ease-in-out; /* Adiciona transição para um efeito suave */
+    background-size:cover;
 }
 .text-content {
     flex: 0 0 50%; /* Ajuste o tamanho conforme necessário */
-}
-.data-panel img{
-    background-size:cover;
 }
 
 section:hover {
@@ -133,19 +131,23 @@ p {
 }
 .services {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-top: 40px;
+    
 }
 
 .service {
-    flex: 0 0 30%;
+    display:flex;
     background-color: #1F1A36;
     padding: 20px;
     border-radius: 8px;
+    margin-left:20px;
     margin-bottom: 20px;
     box-sizing: border-box;
     transition: transform 0.3s ease-in-out, background-color 0.5s ease-in-out;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    flex-direction:column;
+    
 }
 
 .service:hover {
@@ -199,10 +201,73 @@ footer a:hover {
     filter: brightness(1.5);
 }
 
+.experts-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding-top:100px;
+    padding: 30px;
+    background-color: #231E39;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    color: #B3B8CD;
+}
 
-// mobile
+.expert-card {
+    display: flex;
+    flex-direction: row; /* Changed to column for stacking elements */
+    align-items: center;
+    
+}
 
+.expert-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-size:60%;
+   
+}
+.expert-display{
+    display:flex;
+    flex-direction:column;
+}
+.expert-info {
+    text-align: center; /* Center the text */
+}
+
+.expert-info h4 {
+    color: #FEBB0B;
+    margin-bottom: 10px;
+}
+
+.expert-info p {
+    margin: 0;
+    line-height: 1.4;
+}
+.expert-info i{
+    align-items:center;
+}
+.experiences {
+    margin-left: 20px; /* Spacing between info and experiences */
+}
+
+.experiences p {
+    margin: 0;
+    line-height: 1.4;
+}
+
+.experiences p:first-child {
+    font-weight: bold;
+    color: #FEBB0B; /* Orange color for focus effect */
+}
+
+
+
+/* Mobile Styles */
 @media screen and (max-width: 768px) {
+    body {
+        font-size: 14px; /* Ajuste o tamanho da fonte para dispositivos móveis conforme necessário */
+    }
+
     header {
         padding: 15px;
     }
@@ -211,29 +276,33 @@ footer a:hover {
         font-size: 1.5em;
     }
 
+    .main {
+        background-size: auto; /* Altere para 'auto' para evitar que a imagem de fundo seja cortada */
+    }
+
     section {
         margin: 20px;
+        padding: 15px; /* Adicione algum preenchimento para melhorar a leitura no celular */
+        max-width: 100%; /* Garanta que a largura da seção seja 100% na tela pequena */
     }
 
     .main-content {
         flex-direction: column;
     }
 
-    .data-panel {
+    .data-panel,
+    .text-content {
         flex: 1;
         margin-bottom: 20px;
     }
 
-    .text-content {
-        flex: 1;
-    }
-
     .services {
+        
         flex-direction: column;
     }
 
     .service {
-        flex: 1;
+     
         margin-bottom: 20px;
     }
 
@@ -244,4 +313,15 @@ footer a:hover {
     .social-icons {
         flex-direction: column;
     }
+    .expertsec{
+       flex-direction:column;
+    }
+    .expert-card{
+        flex-direction:column;
+    }
+}
+.expertsec{
+    display:flex;
+    justify-content:space-between;
+    margin:10px;
 }
