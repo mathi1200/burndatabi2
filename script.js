@@ -23,12 +23,4 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-    const dataPanel = document.getElementById('dataPanel');
-    const expandedImage = document.getElementById('expandedImage');
-    console.log("clique realizada");
-    dataPanel.addEventListener('click', function () {
-        dataPanel.classList.toggle('expanded');
-        document.body.style.overflow = document.body.style.overflow === 'hidden' ? '' : 'hidden'; // Alternar overflow
-    });
-});
+// Caroussel
