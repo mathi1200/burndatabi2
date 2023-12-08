@@ -226,6 +226,12 @@ footer a:hover {
     background-size:60%;
    
 }
+.imgcont {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    position: relative;
+  }
 .expert-display{
     display:flex;
     flex-direction:column;
