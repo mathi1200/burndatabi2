@@ -2,7 +2,7 @@
     "name": "BURN DATA BI",
     "short_name": "BURN BI",
     "description": "Projetos - Consultoria - Análise de Dados - PowerBi",
-    "start_url": "/",
+    "start_url": "/burndatabi2/",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "grey",
