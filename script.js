@@ -23,40 +23,30 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // pwa
+    // pwa
     const CACHE_NAME = 'your-cache-name';
     const urlsToCache = ['array', 'of', 'your', 'cached', 'urls'];
     let deferredPrompt;
 
-    // Verifique se o botão de instalação foi fechado
-    if (!sessionStorage.getItem('installPromptClosed')) {
-        // Adicione o evento para detectar a disponibilidade do prompt de instalação
-        window.addEventListener('beforeinstallprompt', function (event) {
-            // Armazena a referência da solicitação para uso posterior
-            deferredPrompt = event;
-
-            // Exibe o prompt de instalação
-            displayInstallPrompt();
-        });
-    }
+    // ...
 
     // Função para exibir o prompt de instalação
     function displayInstallPrompt() {
         // Verifica se o usuário não está usando o aplicativo já
         if (!document.querySelector('.pwa-install-prompt')) {
-          const installPrompt = document.createElement('div');
-                installPrompt.className = 'pwa-install-prompt ready-to-install'; // Adiciona a classe 'ready-to-install'
-                installPrompt.innerHTML = `
+            const installPrompt = document.createElement('div');
+            installPrompt.className = 'pwa-install-prompt ready-to-install'; // Adiciona a classe 'ready-to-install'
+            installPrompt.innerHTML = `
                 <p>Instale nosso aplicativo para uma melhor experiência!</p>
                 <button class="install-btn" onclick="installPWA()">Instalar Agora</button>
                 <button class="close-btn" onclick="closeInstallPrompt()">Fechar</button>
-                  `;
-document.body.appendChild(installPrompt);
-
+            `;
             document.body.appendChild(installPrompt);
         }
     }
 
-     function installPWA() {
+    // Função para instalar o PWA
+    window.installPWA = function () {
         const installPrompt = document.querySelector('.pwa-install-prompt');
         if (installPrompt) {
             installPrompt.style.display = 'none';
@@ -86,7 +76,7 @@ document.body.appendChild(installPrompt);
     }
 
     // Função para fechar o prompt de instalação
-    function closeInstallPrompt() {
+    window.closeInstallPrompt = function () {
         const installPrompt = document.querySelector('.pwa-install-prompt');
         if (installPrompt) {
             installPrompt.style.display = 'none';
