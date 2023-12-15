@@ -43,13 +43,15 @@ document.addEventListener('DOMContentLoaded', function () {
     function displayInstallPrompt() {
         // Verifica se o usuário não está usando o aplicativo já
         if (!document.querySelector('.pwa-install-prompt')) {
-            const installPrompt = document.createElement('div');
-            installPrompt.className = 'pwa-install-prompt ready-to-install'; // Adiciona a classe 'ready-to-install'
-            installPrompt.innerHTML = `
+          const installPrompt = document.createElement('div');
+                installPrompt.className = 'pwa-install-prompt ready-to-install'; // Adiciona a classe 'ready-to-install'
+                installPrompt.innerHTML = `
                 <p>Instale nosso aplicativo para uma melhor experiência!</p>
-                <button onclick="installPWA()">Instalar Agora</button>
-                <button onclick="closeInstallPrompt()">Fechar</button>
-            `;
+                <button class="install-btn" onclick="installPWA()">Instalar Agora</button>
+                <button class="close-btn" onclick="closeInstallPrompt()">Fechar</button>
+                  `;
+document.body.appendChild(installPrompt);
+
             document.body.appendChild(installPrompt);
         }
     }
