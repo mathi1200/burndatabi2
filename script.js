@@ -56,8 +56,7 @@ document.body.appendChild(installPrompt);
         }
     }
 
-    // Função para instalar o PWA
-    function installPWA() {
+     function installPWA() {
         const installPrompt = document.querySelector('.pwa-install-prompt');
         if (installPrompt) {
             installPrompt.style.display = 'none';
