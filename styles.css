@@ -347,6 +347,21 @@ footer a:hover {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
+.pwa-install-prompt {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(45deg, #120e21, #3d1c40);
+    color: #B3B8CD; /* cinza gelo */
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
 .pwa-install-prompt button.install-btn {
     background: #FEBB0B;
     color: #1F1A36; /* roxo escuro */
@@ -371,11 +386,13 @@ footer a:hover {
     }
 
     .pwa-install-prompt button.install-btn {
-        padding: 10px 14px;
+        padding: 12px 16px; /* Ajuste o tamanho conforme necessário para dispositivos móveis */
+        font-size: 14px;    /* Ajuste o tamanho da fonte conforme necessário para dispositivos móveis */
     }
 
     .pwa-install-prompt button.close-btn {
         padding: 4px;
+        font-size: 12px;    /* Ajuste o tamanho da fonte conforme necessário para dispositivos móveis */
     }
 }
 
