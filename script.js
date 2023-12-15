@@ -75,8 +75,8 @@ function displayInstallPrompt() {
         installPrompt.className = 'pwa-install-prompt';
         installPrompt.innerHTML = `
             <p>Instale nosso aplicativo para uma melhor experiência!</p>
-            <button onclick="installPWA()">Instalar Agora</button>
-            <button onclick="closeInstallPrompt()">Fechar</button>
+            <button class="install-btn" onclick="installPWA()">Instalar Agora</button>
+            <button class="close-btn" onclick="closeInstallPrompt()">Fechar</button>
         `;
         document.body.appendChild(installPrompt);
     }
