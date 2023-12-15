@@ -331,3 +331,47 @@ footer a:hover {
     justify-content:space-between;
     margin:10px;
 }
+
+.pwa-install-prompt {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(45deg, #120e21, #3d1c40);
+    color: #B3B8CD; /* cinza gelo */
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+  
+.pwa-install-prompt button {
+    background: #FEBB0B;
+    color: #1F1A36; /* roxo escuro */
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Estilo para o ícone flutuante do WhatsApp */
+.whatsapp-icon {
+    position: fixed;
+    bottom: 50vh; /* Posição inicial ao carregar a página */
+    right: 20px;
+    background-color: #25d366; /* Cor de fundo do WhatsApp */
+    color: #ffffff; /* Cor do ícone e do texto */
+    padding: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Certifique-se de que este valor seja maior do que outros elementos na página */
+    transition: bottom 0.5s ease; /* Adicione transição apenas à propriedade bottom */
+}
+
+/* Estilize o ícone do WhatsApp */
+.whatsapp-icon i {
+    font-size: 32px;
+}
