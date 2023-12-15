@@ -356,6 +356,16 @@ footer a:hover {
     border-radius: 5px;
 }
 
+@media (max-width: 600px) {
+    .pwa-install-prompt {
+        padding: 8px;
+    }
+
+    .pwa-install-prompt button {
+        padding: 6px 10px;
+    }
+}
+
 /* Estilo para o ícone flutuante do WhatsApp */
 .whatsapp-icon {
     position: fixed;
