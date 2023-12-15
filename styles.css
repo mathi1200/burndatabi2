@@ -346,25 +346,39 @@ footer a:hover {
     align-items: center;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
-  
-.pwa-install-prompt button {
+
+.pwa-install-prompt button.install-btn {
     background: #FEBB0B;
     color: #1F1A36; /* roxo escuro */
-    padding: 8px 12px;
+    padding: 12px 18px;
     border: none;
     cursor: pointer;
     border-radius: 5px;
 }
 
+.pwa-install-prompt button.close-btn {
+    background: none;
+    color: #B3B8CD;
+    padding: 6px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Adicione regras de mídia para dispositivos móveis */
 @media (max-width: 600px) {
     .pwa-install-prompt {
         padding: 8px;
     }
 
-    .pwa-install-prompt button {
-        padding: 6px 10px;
+    .pwa-install-prompt button.install-btn {
+        padding: 10px 14px;
+    }
+
+    .pwa-install-prompt button.close-btn {
+        padding: 4px;
     }
 }
+
 
 /* Estilo para o ícone flutuante do WhatsApp */
 .whatsapp-icon {
