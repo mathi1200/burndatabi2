@@ -55,27 +55,24 @@ function displayInstallPrompt() {
 
 // Função para instalar o PWA
 function installPWA() {
-    // ...
-    // Lida com a resposta da solicitação
-    console.log("Clicou");
-    deferredPrompt.userChoice.then((choiceResult) => {
-        if (choiceResult.outcome === 'accepted') {
-            // O usuário aceitou a instalação
-            console.log('O usuário aceitou a instalação');
+    console.log("Clicou para instalar PWA");
+    deferredPrompt.prompt();
 
-            // Atualize o cache ou faça outras ações necessárias após a instalação
+    deferredPrompt.userChoice.then((choiceResult) => {
+        console.log("Escolha do usuário:", choiceResult);
+
+        if (choiceResult.outcome === 'accepted') {
+            console.log('O usuário aceitou a instalação');
             updateCache();
         } else {
             console.log('O usuário recusou a instalação');
         }
 
-        // Limpa a referência à solicitação
         deferredPrompt = null;
-
-        // Define a flag indicando que o botão de instalação foi fechado
         sessionStorage.setItem('installPromptClosed', 'true');
     });
 }
+
 
 // Função para fechar o prompt de instalação
 function closeInstallPrompt() {
