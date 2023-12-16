@@ -1,4 +1,4 @@
-const CACHE_NAME = 'burn-data-bi-v2';
+const CACHE_NAME = 'burn-data-bi-v3';
 const urlsToCache = [
   '/',
   'index.html',
