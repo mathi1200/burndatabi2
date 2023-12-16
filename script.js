@@ -26,12 +26,6 @@ document.addEventListener('DOMContentLoaded', function () {
 // fim do scroll script
 
 // pwa
-const CACHE_NAME = 'your-cache-name';
-const urlsToCache = ['array', 'of', 'your', 'cached', 'urls'];
-let deferredPrompt;
-
-
-
 // Verifique se o botão de instalação foi fechado
 if (!sessionStorage.getItem('installPromptClosed')) {
     // Adicione o evento para detectar a disponibilidade do prompt de instalação
