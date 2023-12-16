@@ -30,30 +30,7 @@ const CACHE_NAME = 'your-cache-name';
 const urlsToCache = ['array', 'of', 'your', 'cached', 'urls'];
 let deferredPrompt;
 
-// Verifique se o navegador suporta service workers
-if ('serviceWorker' in navigator) {
-    // Registre o service worker
-    navigator.serviceWorker.register('service-worker.js')
-        .then(function (registration) {
-            console.log('Service Worker registrado com sucesso:', registration);
 
-            // Verifique se a instalação do PWA está disponível
-            if (registration.installing) {
-                registration.installing.addEventListener('statechange', function (event) {
-                    if (event.target.state === 'installed') {
-                        // O evento 'statechange' é disparado quando a instalação é concluída
-                        displayInstallPrompt();
-                    }
-                });
-            } else if (registration.waiting) {
-                // Se já estiver instalado, também exibimos o prompt
-                displayInstallPrompt();
-            }
-        })
-        .catch(function (error) {
-            console.error('Erro ao registrar o Service Worker:', error);
-        });
-}
 
 // Verifique se o botão de instalação foi fechado
 if (!sessionStorage.getItem('installPromptClosed')) {
