@@ -63,6 +63,7 @@ function displayInstallPrompt() {
 function installPWA() {
     // ...
     // Lida com a resposta da solicitação
+    console.log("Clicou");
     deferredPrompt.userChoice.then((choiceResult) => {
         if (choiceResult.outcome === 'accepted') {
             // O usuário aceitou a instalação
